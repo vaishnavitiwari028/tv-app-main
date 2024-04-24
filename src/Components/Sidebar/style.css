@@ -1,0 +1,87 @@
+.sidebar_container {
+  width: 50%;
+  max-width: 300px;
+  background-color: var(--sidebar-clr);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  font-size: 1.2rem;
+  transform-origin: left;
+  animation: slide 0.3s ease;
+}
+@keyframes slide {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: none;
+  }
+}
+.close_icon {
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 5px;
+  width: min-content;
+  transition: 0.1s ease-out transform;
+}
+
+.close_icon:hover {
+  transform: scale(1.1);
+}
+
+.nav_item_container {
+  background-color: white;
+  padding: 0.5em;
+  margin-top: 1rem;
+  width: 92%;
+  border-radius: 25px;
+  transition: 0.3s ease-out transform;
+}
+
+.nav_item_container a,
+.nav_item_container a:visited {
+  text-decoration: none;
+  color: black;
+}
+.nav_item {
+  margin-left: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.channel_link {
+  text-align: center;
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.nav_item_container:hover {
+  background-color: blanchedalmond;
+}
+.select_company:hover + .subbar_container,
+.subbar_container:hover {
+  transform: none;
+}
+
+.subbar_container {
+  position: absolute;
+  left: 100%;
+  margin-top: -12%;
+  margin-left: -10%;
+  border-radius: 5px;
+  list-style-type: none;
+  background-color: white;
+  transform: scaleY(0);
+  transform-origin: top;
+  border: 3px solid white;
+}
+.subbar_item {
+  font-size: 1rem;
+  padding: 0.5em;
+  cursor: pointer;
+}
+.subbar_item:hover {
+  background-color: blanchedalmond;
+}
